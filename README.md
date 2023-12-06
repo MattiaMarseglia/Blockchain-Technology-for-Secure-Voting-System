@@ -1,11 +1,4 @@
-# Responsabili WP 
-
-- Mattia Marseglia
-- Vito Turi
-- Ferdinando Sica
-- Camilla Spingola
-
-# SicurezzaDef
+# Blockchain for Correct Voting Project
 
 Tale progetto ha lo scopo di simulare la realizzazione di un sistema di e-vote basato su BlockChain.
 
