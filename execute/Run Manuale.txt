@@ -1,0 +1,15 @@
+RUN
+per il server:
+javac -cp .:bcprov-jdk15on-159.jar Validatore.java;java -Djavax.net.ssl.keyStore=Serverkeystore.jks -Djavax.net.ssl.keyStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -Djavax.net.ssl.trustStore=truststoreServer.jks -Djavax.net.ssl.trustStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -cp .:bcprov-jdk15on-159.jar Validatore
+
+per il client:
+javac -cp .:bcprov-jdk15on-159.jar Votante.java;java -Djavax.net.ssl.keyStore=Client1keystore.jks -Djavax.net.ssl.keyStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -Djavax.net.ssl.trustStore=truststoreClient1.jks -Djavax.net.ssl.trustStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -cp .:bcprov-jdk15on-159.jar Votante 1 00 
+javac -cp .:bcprov-jdk15on-159.jar Votante.java;java -Djavax.net.ssl.keyStore=Client2keystore.jks -Djavax.net.ssl.keyStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -Djavax.net.ssl.trustStore=truststoreClient2.jks -Djavax.net.ssl.trustStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -cp .:bcprov-jdk15on-159.jar Votante 2 01
+javac -cp .:bcprov-jdk15on-159.jar Votante.java;java -Djavax.net.ssl.keyStore=Client3keystore.jks -Djavax.net.ssl.keyStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -Djavax.net.ssl.trustStore=truststoreClient3.jks -Djavax.net.ssl.trustStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -cp .:bcprov-jdk15on-159.jar Votante 3 11
+javac -cp .:bcprov-jdk15on-159.jar Votante.java;java -Djavax.net.ssl.keyStore=Client4keystore.jks -Djavax.net.ssl.keyStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -Djavax.net.ssl.trustStore=truststoreClient4.jks -Djavax.net.ssl.trustStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -cp .:bcprov-jdk15on-159.jar Votante 4 11
+
+per la Società:
+javac -cp .:bcprov-jdk15on-159.jar Societa.java;java -Djavax.net.ssl.keyStore=Societykeystore.jks -Djavax.net.ssl.keyStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -Djavax.net.ssl.trustStore=truststoreSociety.jks -Djavax.net.ssl.trustStorePassword=c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -cp .:bcprov-jdk15on-159.jar Societa
+
+
+

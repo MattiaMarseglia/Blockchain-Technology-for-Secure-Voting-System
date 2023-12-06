@@ -1,0 +1,41 @@
+//SERVER
+keytool -providerpath bcprov-jdk15on-159.jar -provider org.bouncycastle.jce.provider.BouncyCastleProvider -genkey -noprompt -trustcacerts -keyalg EC -alias sslVal  -dname "cn=localhost, ou=Kryptos, o=unisa, c=IT" -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -keystore Serverkeystore.jks
+//CLIENT
+keytool -providerpath bcprov-jdk15on-159.jar -provider org.bouncycastle.jce.provider.BouncyCastleProvider -genkey -noprompt -trustcacerts -keyalg EC -alias sslClient1  -dname "cn=localhost, ou=Kryptos, o=unisa, c=IT" -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -keystore Client1keystore.jks
+keytool -providerpath bcprov-jdk15on-159.jar -provider org.bouncycastle.jce.provider.BouncyCastleProvider -genkey -noprompt -trustcacerts -keyalg EC -alias sslClient2  -dname "cn=localhost, ou=Kryptos, o=unisa, c=IT" -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -keystore Client2keystore.jks
+keytool -providerpath bcprov-jdk15on-159.jar -provider org.bouncycastle.jce.provider.BouncyCastleProvider -genkey -noprompt -trustcacerts -keyalg EC -alias sslClient3  -dname "cn=localhost, ou=Kryptos, o=unisa, c=IT" -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -keystore Client3keystore.jks
+keytool -providerpath bcprov-jdk15on-159.jar -provider org.bouncycastle.jce.provider.BouncyCastleProvider -genkey -noprompt -trustcacerts -keyalg EC -alias sslClient4  -dname "cn=localhost, ou=Kryptos, o=unisa, c=IT" -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -keystore Client4keystore.jks
+//SOCIETY
+keytool -providerpath bcprov-jdk15on-159.jar -provider org.bouncycastle.jce.provider.BouncyCastleProvider -genkey -noprompt -trustcacerts -keyalg EC -alias sslSociety  -dname "cn=localhost, ou=Kryptos, o=unisa, c=IT" -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -keystore Societykeystore.jks
+
+
+//SERVER
+keytool -export -alias sslVal -storepass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -file sslserver.cer -keystore Serverkeystore.jks
+//CLIENT
+keytool -export -alias sslClient1 -storepass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -file sslClient1.cer -keystore Client1keystore.jks;
+keytool -export -alias sslClient2 -storepass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -file sslClient2.cer -keystore Client2keystore.jks;
+keytool -export -alias sslClient3 -storepass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -file sslClient3.cer -keystore Client3keystore.jks;
+keytool -export -alias sslClient4 -storepass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -file sslClient4.cer -keystore Client4keystore.jks;
+//SOCIETY
+keytool -export -alias sslSociety -storepass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867 -file sslSociety.cer -keystore Societykeystore.jks
+
+//SERVER
+keytool -import -v -trustcacerts -alias sslVal -keystore truststoreClient1.jks -file sslserver.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslSociety -keystore truststoreClient1.jks -file sslSociety.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslVal -keystore truststoreClient2.jks -file sslserver.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslSociety -keystore truststoreClient2.jks -file sslSociety.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslVal -keystore truststoreClient3.jks -file sslserver.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslSociety -keystore truststoreClient3.jks -file sslSociety.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslVal -keystore truststoreClient4.jks -file sslserver.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslSociety -keystore truststoreClient4.jks -file sslSociety.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+
+
+//CLIENT
+keytool -import -v -trustcacerts -alias sslClient1 -keystore truststoreServer.jks -file sslClient1.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslClient2 -keystore truststoreServer.jks -file sslClient2.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslClient3 -keystore truststoreServer.jks -file sslClient3.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslClient4 -keystore truststoreServer.jks -file sslClient4.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+keytool -import -v -trustcacerts -alias sslSociety -keystore truststoreServer.jks -file sslSociety.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
+
+//SOCIETY
+keytool -import -v -trustcacerts -alias sslVal -keystore truststoreSociety.jks -file sslserver.cer -keypass c7bc135a855d40b7c799b5e7e217c8730054a32d46bb43ba6e905f435f1a2867
