@@ -1,9 +1,9 @@
 # Responsabili WP 
 
-- WP1 Mattia Marseglia
-- WP2 Vito Turi
-- WP3 Ferdinando Sica
-- WP4 Camilla Spingola
+- Mattia Marseglia
+- Vito Turi
+- Ferdinando Sica
+- Camilla Spingola
 
 # SicurezzaDef
 
@@ -16,6 +16,9 @@ Le altre classi ovvero, Utils.java, Cryptare.java, SmartContract.java, MyKeyMana
 L’autorizzazione a votare per ciascun votante, descritta nel documento come possesso di un NFT, è stato simulato attraverso la verifica dello Smart Contract del possesso di un certificato pre-generato da parte di ciascun votante, utilizzando KeyStore e TrustStore.
 I due tool, Tor e SPID, di cui si è fatto utilizzo nella progettazione in WP2 e nell’analisi in WP3, non sono stati simulati all’interno di questo WP.
 
+### More Information
+for more detailed information: [Project Report](APS_ProjectWork_ConsegnaMidterm_GruppoKryptos.pdf)
+
 ### How To Execute
 
 Il jar di bouncyCastle per poter essere inviato tramite Gmail è stato convertito in un file .txt, per una corretta esecuzione da riga di comando va ripristinata la sua estensione (.jar).
@@ -26,8 +29,6 @@ Nella cartella execute si trovano:
 - execClient#.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Votante.java)
 - execServer.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Validatore.java)
 
-### More Information
-for more information 
 - execSocieta.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Societa.java)
 
 Dopo aver effettuato le dovute modifiche il progetto può essere lanciato eseguendo solo il file "./exec.sh"
