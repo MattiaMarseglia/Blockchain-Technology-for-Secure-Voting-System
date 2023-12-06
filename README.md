@@ -1,30 +1,30 @@
 # Blockchain for Correct Voting Project
 
-Tale progetto ha lo scopo di simulare la realizzazione di un sistema di e-vote basato su BlockChain.
+This project aims to simulate the development of an e-voting system based on Blockchain.
 
-I file riportati nella cartella "SicurezzaDef" comprono lo svolgimento del WP4. Nello specifico gli attori previsti sono: un Validatore, quattro Votanti e la Societa, ciascuno rappresentato da uno specifico programma. Questi diversi programmi comunicano tra di loro mediante l'impiego di Socket, simulando in questo modo l'invio del voto correttamente cifrato e firmato e della annessa randomness, da parte dei votanti al validatore e l'invio della chiave privata della Societa al validatore.
-L’intero progetto si inserisce in un contesto TLS.
-Come simulazione della BlockChain il validatore farà riferimento a metodi contenuti all'interno della classe SmartContract, simulando l'aggiunta di blocchi attraverso la scrittura su un file di testo "ItalyChain.txt" (da eliminare prima di ogni esecuzione).
-Le altre classi ovvero, Utils.java, Cryptare.java, SmartContract.java, MyKeyManager.java, AppendingObjectOutputStream.java e toVote.java contengono metodi funzionali allo svolgimento della simulazione di votazione.
-L’autorizzazione a votare per ciascun votante, descritta nel documento come possesso di un NFT, è stato simulato attraverso la verifica dello Smart Contract del possesso di un certificato pre-generato da parte di ciascun votante, utilizzando KeyStore e TrustStore.
-I due tool, Tor e SPID, di cui si è fatto utilizzo nella progettazione in WP2 e nell’analisi in WP3, non sono stati simulati all’interno di questo WP.
+The files in the "SicurezzaDef" folder comprise the implementation of WP4. Specifically, the anticipated actors include a Validator, four Voters, and the Company, each represented by a specific program. These different programs communicate with each other using Sockets, thus simulating the transmission of correctly encrypted and signed votes along with the associated randomness from the voters to the validator and the transmission of the Company's private key to the validator.
+The entire project is set within a TLS context.
+As a simulation of the Blockchain, the validator will refer to methods contained within the SmartContract class, simulating the addition of blocks by writing to a text file, "ItalyChain.txt" (to be deleted before each execution).
+The other classes, namely Utils.java, Cryptare.java, SmartContract.java, MyKeyManager.java, AppendingObjectOutputStream.java, and toVote.java, contain methods essential to the simulation of the voting process.
+The authorization to vote for each voter, described in the document as the possession of an NFT, has been simulated through the Smart Contract's verification of the possession of a pre-generated certificate by each voter, using KeyStore and TrustStore.
+The two tools, Tor and SPID, utilized in the design in WP2 and the analysis in WP3, have not been simulated within this WP.
 
 ### More Information
 for more detailed information: [Project Report](APS_ProjectWork_ConsegnaMidterm_GruppoKryptos.pdf)
 
 ### How To Execute
 
-Il jar di bouncyCastle per poter essere inviato tramite Gmail è stato convertito in un file .txt, per una corretta esecuzione da riga di comando va ripristinata la sua estensione (.jar).
+The BouncyCastle jar, in order to be sent via Gmail, has been converted into a .txt file. For proper command-line execution, its extension (.jar) needs to be restored.
 
-Nella cartella execute si trovano:
+In the "execute" folder, you will find:
 
-- exec.sh, da modificare opportunamente per permettere l'esecuzione di terminali relativamente al proprio sistema operativo, è necessario anche modificare il path presente nella prima riga in modo da poter cancellare automaticamente il file ItalyChain.txt
-- execClient#.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Votante.java)
-- execServer.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Validatore.java)
+- exec.sh, which needs to be appropriately modified to enable the execution of terminals according to your operating system. It is also necessary to modify the path in the first line to automatically delete the file ItalyChain.txt.
+- execClient#.sh, which should be modified accordingly to access the correct directory (where the Votante.java file is located).
+- execServer.sh, which should be modified accordingly to access the correct directory (where the Validatore.java file is located).
 
-- execSocieta.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Societa.java)
+- execSocieta.sh, which should be appropriately modified to access the correct directory (where the Societa.java file is located).
 
-Dopo aver effettuato le dovute modifiche il progetto può essere lanciato eseguendo solo il file "./exec.sh"
+After making the necessary modifications, the project can be launched by executing only the "./exec.sh" file.
 
-- "Generazione Certificati.txt", che contiene le istruzioni eseguite per generare i certificati utilizzati nel progetto, keyStores e trustStores
-- "Run Manuale.txt", che contiene le istruzioni necessarie per la compilazione ed esecuzione manuale dell'intero WP4. Ogni istruzione necessita di un proprio terminale.
+- "Generazione Certificati.txt," which contains the instructions executed to generate the certificates used in the project, including keyStores and trustStores.
+- "Run Manuale.txt," which contains the instructions necessary for manual compilation and execution of the entire WP4. Each instruction requires its own terminal.
