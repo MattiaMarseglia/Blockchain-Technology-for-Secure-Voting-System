@@ -5,10 +5,6 @@
 - WP3 Ferdinando Sica
 - WP4 Camilla Spingola
 
-# Cambiamenti effettuati rispetto alla consegna intermedia
-
-Per quanto riguarda WP1 e WP2 le uniche modifiche hanno riguardato correzioni lessico sintattiche per migliorare la chiarezaz di quanto scritto, fatta eccezione per la modifica nella codifica dei voti in WP1. Il WP4 è stato realizzato da zero, il WP3 ha mantenuto quasi integralmente inalterata l'analisi per gli avversari, fatta eccezione per correzioni lessico sintattiche, mentre è stata modificata la tabella dei tool utilizzati ed è stato inserito il grafico radar con annesso commento. 
-
 # SicurezzaDef
 
 Tale progetto ha lo scopo di simulare la realizzazione di un sistema di e-vote basato su BlockChain.
@@ -29,6 +25,9 @@ Nella cartella execute si trovano:
 - exec.sh, da modificare opportunamente per permettere l'esecuzione di terminali relativamente al proprio sistema operativo, è necessario anche modificare il path presente nella prima riga in modo da poter cancellare automaticamente il file ItalyChain.txt
 - execClient#.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Votante.java)
 - execServer.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Validatore.java)
+
+### More Information
+for more information 
 - execSocieta.sh, da modificare opportunamente per accedere alla directory corretta (dove è contenuto il file Societa.java)
 
 Dopo aver effettuato le dovute modifiche il progetto può essere lanciato eseguendo solo il file "./exec.sh"
